@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/font/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="assets/owl/owl.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+    <title>O'yah!</title>
+</head>
+<body>
+
+    <header class="desktop-header">
+        <div class="container">
+            <a href="index.html" class="site-logo">
+                <img src="assets/img/logo.svg">
+            </a>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#partners">PARTNERS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <select>
+                <option><a href="#">AR</a></option>
+                <option><a href="#">EN</a></option>
+            </select>
+        </div>
+    </header>
+
+    <header class="mobile-header">
+        <div class="container">
+            <a href="index.html" class="site-logo">
+                <img src="assets/img/logo.svg">
+            </a>
+
+            <img class="toggle" src="assets/img/menu.svg">
+
+            <div class="nav">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#partners">PARTNERS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+                <select>
+                    <option><a href="#">AR</a></option>
+                    <option><a href="#">EN</a></option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container owl-carousel">
+            <div class="item">
+                <div class="hlf">
+                    <h2>Favorites, loyalty and gift social networking</h2>
+                    <hr>
+                </div>
+                <div class="hlf">
+                    <img src="assets/img/mobile.svg">
+                </div>
+            </div>
+            <div class="item">
+                <div class="hlf">
+                    <h2>Favorites, loyalty and gift social networking</h2>
+                    <hr>
+                </div>
+                <div class="hlf">
+                    <img src="assets/img/mobile.svg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="separate-footer">
+        <div class="container">
+            <div class="col-1">
+                <h2>Get the Oyah App</h2>
+                <h4>Download App From</h4>
+            </div>
+            <div class="col-5">
+                <a href="https://apps.apple.com/sa/app/oyah/id1574082141?ign-itscg=30200&ign-itsct=apps_box_badge">Get iOS App<img src="assets/img/apple.svg"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.app.oyah&hl=en_US&gl=US">Get Android App<img src="assets/img/android.svg"></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">DESIGN BY OYAH! - © 2022. ALL RIGHTS RESERVED.</div>
+    </div>
+
+</body>
+
+
+<!-- scripts -->
+<script src="assets/jquery-3.6.0.min.js"></script>
+<script src="assets/owl/owl.js"></script>
+
+<script>
+    jQuery(document).ready(function () {
+
+        // Menu
+        jQuery(document).on('click', '.toggle', function () {
+            jQuery('.nav').slideToggle();
+        });
+
+        // Banner slider
+        jQuery('.hero .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 0,
+            nav: true,
+            dots: false,
+            // autoplay:true,
+            smartSpeed: 2000,
+            autoplaySpeed: 2000,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        // Work Together to Make it Better
+        jQuery('.partners .owl-carousel').owlCarousel({
+            loop: true,
+            nav: false,
+            dots: true,
+            items: 5,
+            // autoplay:true,
+            smartSpeed: 1000,
+            autoplaySpeed: 3000,
+            responsive: {
+                0: {
+                    margin: 25,
+                    items: 3
+                },
+                767: {
+                    margin: 50,
+                    items: 3
+                },
+                1024: {
+                    margin: 80
+                }
+            }
+        });
+
+    }); //document closed.
+</script>
+
+</html>
