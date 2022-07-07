@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="http://fonts.cdnfonts.com/css/avenir-lt-std" rel="stylesheet">
+    <style>@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");</style>
+    <style>
+        body {
+            font-family: "Avenir LT Std", sans-serif;
+            font-size: 16px;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body style="padding: 0px 5px; overflow: scroll; height: 99vh; -webkit-overflow-scrolling: touch; scroll-behavior: smooth;">
+    <div>
+        <h1>
+            For ordering and earning the points.
+        </h1>
+        <div>
+            <center>
+                <video style="width:100%;" autoplay muted playsinline poster="https://oyah-products.s3.eu-west-1.amazonaws.com/oyah-thumbnail.png">
+                    <source src="https://oyah-products.s3.eu-west-1.amazonaws.com/how-it-works-en.mp4" type="video/mp4">
+                </video>
+            </center>
+            <ul>
+                <li>Check in to display the menu, view friends and other favorites.</li>
+                <li>Order and pay.</li>
+                <li>You will be notified once order is ready to pick it up.</li>
+                <li>Review and share your favorite orders to earn the sharing points.</li>
+            </ul>
+        </div>
+        <h1>
+            For sending and redeeming gifts.
+        </h1>
+        <div>
+            <center>
+                <video style="width:100%;" autoplay muted playsinline poster="https://oyah-products.s3.eu-west-1.amazonaws.com/oyah-thumbnail.png">
+                    <source src="https://oyah-products.s3.eu-west-1.amazonaws.com/gifts-en.mp4" type="video/mp4">
+                </video>
+            </center>
+            <h2>
+                To send a gift.
+            </h2>
+            <ul>
+                <li>Click on the gift icon and select the user you want to gift.</li>
+                <li>select one of the available stores and select the items you want to gift.</li>
+                <li>Write something and pay.</li>
+                <li>Gift will be sent.</li>
+            </ul>
+            <h2>
+                To redeem the gift.
+            </h2>
+            <ul>
+                <li>Check in at store to display the menu.</li>
+                <li>You will find the gift in the menu.</li>
+                <li>Add to the cart and check out.</li>
+                <li>You will be notified once it is ready to pick it up.</li>
+            </ul>
+        </div>
+        <h1>
+            To earn and rewards your friends with extra points.
+        </h1>
+        <div>
+            <center>
+                <video style="width:100%;" autoplay muted playsinline poster="https://oyah-products.s3.eu-west-1.amazonaws.com/oyah-thumbnail.png">
+                    <source src="https://oyah-products.s3.eu-west-1.amazonaws.com/referral-purchase-points-en.mp4" type="video/mp4">
+                </video>
+            </center>
+            <div>
+                <ul>
+                    <li>Check in and order from someone favorite menu.</li>
+                    <li>You will earn the ordering points and he/she will earn the referring points.</li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.addEventListener("scroll", function (e) {
+                var videos = document.querySelectorAll("video[autoplay]");
+                for (var i = 0; i < videos.length; i++) {
+                    var video = videos[i];
+                    if (checkVisible(video)) {
+                        video.muted = true;
+                        video.play();
+                        video.muted = false;
+                    } else {
+                        video.pause();
+                    }
+                }
+            }); function checkVisible(element) {
+                var rect = element.getBoundingClientRect();
+                var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+            }
+        </script>
+    </div>
+</body>
+</html>
